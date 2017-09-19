@@ -63,7 +63,7 @@ namespace DiscordBot
             // Register a Hook into the UserUpdated event using a Lambda.
             discord.UserUpdated += async (s, e) => {
 
-                // Check that the user is in a Voice channel
+                // Check that the user is in a Voice channel.
                 if (e.After.VoiceChannel == null) return;
                 
                 var logChannel = e.Server.FindChannels("general").FirstOrDefault();
