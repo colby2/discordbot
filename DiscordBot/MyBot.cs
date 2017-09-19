@@ -60,7 +60,7 @@ namespace DiscordBot
 
             };
 
-            // Register a Hook into the UserUpdated event using a Lambda
+            // Register a Hook into the UserUpdated event using a Lambda.
             discord.UserUpdated += async (s, e) => {
 
                 // Check that the user is in a Voice channel
