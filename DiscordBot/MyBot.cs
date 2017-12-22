@@ -42,7 +42,7 @@ namespace DiscordBot
             commands = discord.GetService<CommandService>();
 
             SendRoastCommand();
-            FuckCommand();
+           
 
             discord.UserJoined += async (s, e) =>
             {
@@ -75,12 +75,12 @@ namespace DiscordBot
             };
 
 
-
-            discord.ExecuteAndWait(async () =>
-            {
-                await discord.Connect("MzQ2MDgyNTU2MDk5Mjk3Mjky.DHEt3Q.XHOz8IW7GBya2v_m2tHSUVSRD50",TokenType.Bot);
-            });
-        }
+            //need new token
+        //    discord.ExecuteAndWait(async () =>
+        //    {
+        //        //token no longer valid await discord.Connect("token",TokenType.Bot);
+        //    });
+        //}
 
         private void Log(object sender, LogMessageEventArgs e)
         {
@@ -98,14 +98,6 @@ namespace DiscordBot
                 });
         }
 
-        private void FuckCommand()
-        {
-            commands.CreateCommand("Hello")
-                .Do(async (e) =>
-                {
-                    
-                    await e.Channel.SendTTSMessage($"Ello {e.User}!");
-                });
-        }
+       
     }
 }
